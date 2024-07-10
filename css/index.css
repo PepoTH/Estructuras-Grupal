@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Pixel-Bold";
+    src: url("../resources/Pixelify_Sans/static/PixelifySans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel-Regular";
+    src: url("../resources/Pixelify_Sans/static/PixelifySans-Regular.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+}
+
+main {
+    background-image: url(../resources/97wpqwc5p5w91.gif);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+nav{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10vw;
+    position: fixed;
+    align-items: end;
+    right: 0;
+    padding: 30px;
+    height: 100vh;
+    text-align: end;
+    background-color: #25252570;
+    transition: all 0.5s
+}
+
+.nav-element {
+    font-family: 'Pixel-Regular';
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.nav-element:hover {
+    background-color:#ffffff;
+    color: #252525;
+    
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.nav-before {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    position: fixed;
+    align-items: end;
+    right: 0;
+    height: 100vh;
+    padding: 0px 20px;
+    cursor: pointer;
+    gap: 40px;
+    background-color: #25252570;
+    transition: all 0.5s;
+    font-family: 'Pixel-Regular';
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+h1 {
+    font-family: 'Pixel-Bold';
+    color: white;
+    font-size: 3rem;
+    filter: drop-shadow(0 0 5px white);
+}
+
+p, h3 {
+    font-family: 'Pixel-Regular';
+    color: rgb(225, 225, 225);
+    filter: drop-shadow(0 0 5px white);
+    text-align: center;
+}
+
+.ejercicios {
+    background-image: url('../resources/wp13159348-pixel-cave-wallpapers.png');
+    background-size: cover;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.division {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(69, 40, 21));
+    filter: drop-shadow(0 0 100px black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.title-division {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-element a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Pixel-Regular';
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.list-element a:hover {
+    background-color:#ffffff;
+    color: #252525;
+    width: 100%;
+}
+
+.ejercicio {
+    background-color: #00000050;
+    padding: 20px;
+}
