@@ -2,7 +2,7 @@
 
 ---  
 
-###Resolver y Programar:  
+### Resolver y Programar:  
 
 1. ¿De cuántas maneras pueden sentarse 10 personas en un banco si hay 4 sitios disponibles?
 2. En una clase de 21 alumnos van a distribuirse 3 premios. Averiguar de cuántos modos puede hacerse si:
