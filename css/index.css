@@ -93,7 +93,7 @@ p, h3 {
 
 .ejercicios {
     background-image: url('../resources/veronica-norbrink-cave-background-4-space-boii.jpg');
-    height: 300vh;
+    height: 600vh;
     background-size: contain;
     display: flex;
     flex-direction: column;
