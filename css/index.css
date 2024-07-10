@@ -92,9 +92,9 @@ p, h3 {
 }
 
 .ejercicios {
-    background-image: url('../resources/wp13159348-pixel-cave-wallpapers.png');
-    background-size: cover;
+    background-image: url('../resources/veronica-norbrink-cave-background-4-space-boii.jpg');
     height: 300vh;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -105,7 +105,7 @@ p, h3 {
 
 .division {
     height: 100vh;
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(69, 40, 21));
+    background: black;
     filter: drop-shadow(0 0 100px black);
     display: flex;
     flex-direction: column;
