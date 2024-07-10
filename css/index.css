@@ -143,3 +143,28 @@ ul {
     background-color: #00000050;
     padding: 20px;
 }
+
+input {
+    padding: 5px;
+    font-family: 'Pixel-Regular';
+    border-style: solid;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    background-color: #90bcff;
+    color: #252525;
+    font-family: 'Pixel-Regular';
+    cursor: pointer;
+    transition: all 0.5s steps(4);
+}
+
+button:hover {
+    padding: 10px 30px;
+    background-color: #3672fb;
+    color: white;
+}
