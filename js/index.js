@@ -71,3 +71,39 @@ function permutacion(n,k){
     let p = (factorial(n))/(factorial(n-k))
     return p
 }
+
+document.getElementById('operar1').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('personas1').value)
+    let k = parseInt(document.getElementById('sitios1').value)
+    let res = document.getElementsByClassName('result1')[0]
+    if(isNaN(n) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < k){
+        alert('El numero de personas no puede ser menor al numero de sitios')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+combinacion(n,k)
+    }
+})
+
+document.getElementById('operar2').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('alumnos2').value)
+    let k = parseInt(document.getElementById('premios2').value)
+    let res = document.getElementsByClassName('result2')[0]
+    let opcion = document.getElementById('opcion2').value
+    if(isNaN(n) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < k){
+        alert('El numero de personas no puede ser menor al numero de sitios')
+    }
+    else{
+        if(opcion == 'Diferentes'){
+            res.innerHTML = 'Solucion: '+permutacion(n,k)
+        }
+        else{
+            res.innerHTML = 'Solucion: '+combinacion(n,k)
+        }
+    }
+})
