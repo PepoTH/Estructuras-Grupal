@@ -177,3 +177,47 @@ document.getElementById('operar6').addEventListener('click',()=>{
         res.innerHTML = 'Solucion: '+ 365**n
     }
 })
+
+//Ejercicio 7
+document.getElementById('operar7').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('rayas7').value)
+    let k = parseInt(document.getElementById('puntos7').value)
+    let res = document.getElementsByClassName('result7')[0]
+    if(isNaN(n) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1){
+        alert('Los digitos no pueden ser menores a 1')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+ factorial(n+k)/(factorial(n)*factorial(k))
+    }
+})
+
+//Ejercicio 8
+document.getElementById('operar8').addEventListener('click',()=>{
+    let total = parseInt(document.getElementById('total8').value)
+    let n = parseInt(document.getElementById('cara8').value)
+    let k = parseInt(document.getElementById('cruz8').value)
+    let opcion = document.getElementById('opcion8').value
+    let res = document.getElementsByClassName('result8')[0]
+    if(isNaN(n) || isNaN(k) || isNaN(total)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1 || total < 1){
+        alert('Los numeros no pueden ser menores a 1')
+    }
+    else if(n+k > total || n+k < total){
+        alert('La suma de cara y cruz tiene que ser igual al total')
+    }
+    else{
+        if(opcion == 'Resultados'){
+            res.innerHTML = 'Solucion: '+ 2 ** total
+        }
+        else{
+            res.innerHTML = 'Solucion: '+ factorial(total)/(factorial(n)*factorial(k))
+        }
+    }
+})
+
+//Ejercicio 9
