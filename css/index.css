@@ -48,7 +48,6 @@ nav{
 .nav-element:hover {
     background-color:#ffffff;
     color: #252525;
-    
     padding: 20px 0px;
     width: 100%;
 }
@@ -172,15 +171,5 @@ button {
 button:hover {
     padding: 10px 30px;
     background-color: #3672fb;
-    color: white;
-}
-
-.limpiar {
-    background-color: #ff8c82;
-    border-color: black;
-}
-
-.limpiar:hover {
-    background-color: #f84a3b;
     color: white;
 }

@@ -1,22 +1,21 @@
-nav_before = document.getElementsByClassName('nav-before')[0]
-nav = document.getElementsByClassName('navbar')[0]
-box = document.getElementsByClassName('main-index')[0]
-close = document.getElementById('close')
-ejtitle = document.getElementById('ejercicios-titlenav')
-listaejercicios = document.getElementById('list-nav')
+var nav_before = document.getElementsByClassName('nav-before')[0]
+var nav = document.getElementsByClassName('navbar')[0]
+var box = document.getElementsByClassName('main-index')[0]
+var closeside = document.getElementById('close')
+var ejtitle = document.getElementById('ejercicios-titlenav')
+var listaejercicios = document.getElementById('list-nav')
 listaejercicios.style.display = 'none'
-inicio = document.getElementById('init')
-github = document.getElementById('git')
+var inicio = document.getElementById('init')
+var github = document.getElementById('git')
 
 //Apertura de Menu
 nav_before.addEventListener('click',()=>{
     nav.style.display = 'flex'
-    nav_before.style.display = 'none'
-    box.style.filter = 'blur(5px)';
+    nav_before.style.display = 'none';
 })
 
 //Cierre de Menu
-close.addEventListener('click',()=>{
+closeside.addEventListener('click',()=>{
     nav.style.display = 'none'
     nav_before.style.display = 'flex'
 })
@@ -34,7 +33,7 @@ github.addEventListener('click',()=>{
 //Verificar para abrir y cerrar ejercicios
 var openit = true
 ejtitle.addEventListener('click',()=>{
-    if(openit === true){
+    if(openit == true){
         listaejercicios.style.display = 'flex'
         openit = false
     }
@@ -72,6 +71,8 @@ function permutacion(n,k){
     return p
 }
 
+
+//Ejercicio 1
 document.getElementById('operar1').addEventListener('click',()=>{
     let n = parseInt(document.getElementById('personas1').value)
     let k = parseInt(document.getElementById('sitios1').value)
@@ -87,6 +88,7 @@ document.getElementById('operar1').addEventListener('click',()=>{
     }
 })
 
+//Ejercicio 2
 document.getElementById('operar2').addEventListener('click',()=>{
     let n = parseInt(document.getElementById('alumnos2').value)
     let k = parseInt(document.getElementById('premios2').value)
@@ -96,7 +98,7 @@ document.getElementById('operar2').addEventListener('click',()=>{
         alert('Por favor, introduce números válidos')
     }
     else if(n < k){
-        alert('El numero de personas no puede ser menor al numero de sitios')
+        alert('El numero de alumnos no puede ser menor al numero de premios')
     }
     else{
         if(opcion == 'Diferentes'){
@@ -105,5 +107,73 @@ document.getElementById('operar2').addEventListener('click',()=>{
         else{
             res.innerHTML = 'Solucion: '+combinacion(n,k)
         }
+    }
+})
+
+//Ejercicio 3
+document.getElementById('operar3').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('lados3').value)
+    let res = document.getElementsByClassName('result3')[0]
+    if(isNaN(n)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 4){
+        alert('El numero de lado no puede ser menor a 4')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+ n * (n - 3) / 2;
+    }
+})
+
+//Ejercicio 4
+document.getElementById('operar4').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('hombres4').value)
+    let k = parseInt(document.getElementById('mujeres4').value)
+    let res = document.getElementsByClassName('result4')[0]
+    if(isNaN(n) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1){
+        alert('El numero de hombres y mujeres no puede ser menor a 1')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+ combinacion(n+k,k) * factorial(n)
+    }
+})
+
+//Ejercicio 5
+document.getElementById('operar5').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('digitos5').value)
+    let opcion = document.getElementById('opcion5').value
+    let res = document.getElementsByClassName('result5')[0]
+    if(isNaN(n)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1){
+        alert('Los digitos no pueden ser menores a 1')
+    }
+    else{
+        if(opcion == 'Repeticion'){
+            res.innerHTML = 'Solucion: '+ (9 ** n)
+        }
+        else {
+            res.innerHTML = 'Solucion: '+ permutacion(9,n)
+        }
+        
+    }
+})
+
+//Ejercicio 6
+document.getElementById('operar6').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('amigos6').value)
+    let res = document.getElementsByClassName('result6')[0]
+    if(isNaN(n)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1){
+        alert('Los digitos no pueden ser menores a 1')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+ 365**n
     }
 })
