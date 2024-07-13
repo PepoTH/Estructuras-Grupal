@@ -1,6 +1,9 @@
 # Estructuras-Grupal
 
 ---  
+Deployment:  
+https://combinaciones.netlify.app/#ejer14
+---
 
 ### Resolver y Programar:  
 
