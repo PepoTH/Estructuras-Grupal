@@ -183,6 +183,7 @@
                 <select id="opcion8">
                     <option>Resultados</option>
                     <option>50% Cara y 50% Cruz</option>
+                </select>
                 <button id="operar8">Operar</button>
                 <p class="solucion result8"></p>
             </div>
@@ -190,19 +191,27 @@
         <div class="ejercicio" id="ejer9">
             <h3>Ejercicios 9</h3>
             <p>5 libros de matemáticas, 7 de control de proyecto y 3 de interfaces<br> han de ser colocados en una biblioteca. ¿Cuántas colocaciones distintas admiten si:
-                <br>a) los libros de cada materia han de estar juntos;
-                <br>b) Sólo los de matemáticas tienen que estar juntos?
+                <br>a) los libros de cada materia han de estar juntos
+                <br>b) Sólo los de matemáticas tienen que estar juntos
             </p>
             <h3>Solucion A</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>Resultado: 3628800</p>
             <h3>Solucion B</h3>
-            <p>Tipo: Combinacion;  Resultado: 1330</p>
+            <p>Resultado: 4790016000</p>
             <h3>Alternativa</h3>
-            <div class="alternativa numero1">
-                <input id="mate9" placeholder="Matematicas" type="text">
+            <div class="alternativa numero9">
+                <input id="mate9" placeholder="Matematica" type="text">
                 <input id="control9" placeholder="Control" type="text">
-                <input id="inter9" placeholder="Interfaces" type="text">
+                <input id="interfaz9" placeholder="Interfaces" type="text">
+                <select id="opcion9">
+                    <option>Todos</option>
+                    <option>Matematicas</option>
+                    <option>Control</option>
+                    <option>Interfaces</option>
+                </select>
+                <br>
                 <button id="operar9">Operar</button>
+                <p class="solucion result9"></p>
             </div>
         </div>
         <div class="ejercicio" id="ejer10">
@@ -212,13 +221,19 @@
                  y dos unidades diferentes de química. Por lo tanto, existen:
             </p>
             <h3>Solucion</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>Tipo: Permutacion con Repeticion;  Resultado: 2310</p>
             <h3>Alternativa</h3>
-            <div class="alternativa numero1">
+            <div class="alternativa numero10">
                 <input id="mate10" placeholder="Matematicas" type="text">
                 <input id="fisic10" placeholder="Fisica" type="text">
                 <input id="quimic10" placeholder="Quimica" type="text">
+                <select id="opcion10">
+                    <option>Matematicas</option>
+                    <option>Control</option>
+                    <option>Interfaces</option>
+                </select>
                 <button id="operar10">Operar</button>
+                <p class="solucion result10"></p>
             </div>
         </div>
         <div class="ejercicio" id="ejer11">
@@ -227,14 +242,19 @@
                 ¿De cuantas maneras puede elegirlas? ¿Y si las 4 primeras son obligatorias?
             </p>
             <h3>Solucion A</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>Resultado: 120</p>
             <h3>Solucion B</h3>
-            <p>Tipo: Combinacion;  Resultado: 1330</p>
+            <p>Resultado: 20</p>
             <h3>Alternativa</h3>
             <div class="alternativa numero1">
-                <input id="alumnos2" placeholder="Alumnos" type="text">
-                <input id="premios2" placeholder="Premios" type="text">
+                <input id="elegir11" placeholder="Preguntas Elegidas" type="text">
+                <input id="totales11" placeholder="Preguntas Totales" type="text">
+                <select id="opcion11">
+                    <option>Sin Obligatorias</option>
+                    <option>Obligatorias</option>
+                </select>
                 <button id="operar11">Operar</button>
+                <p class="solucion result11"></p>
             </div>
         </div>
         <div class="ejercicio" id="ejer12">
@@ -243,11 +263,12 @@
                  habrá que imprimir si cada billete lleva impresas las estaciones de origen y destino?
             </p>
             <h3>Solucion A</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>Resultado: 600</p>
             <h3>Alternativa</h3>
             <div class="alternativa numero1">
-                <input id="estacion12" placeholder="Estaciones" type="text">
+                <input id="billetes12" placeholder="Billetes" type="text">
                 <button id="operar12">Operar</button>
+                <p class="solucion result12"></p>
             </div>
         </div>
         <div class="ejercicio" id="ejer13">
@@ -256,11 +277,12 @@
                  podrán llegar a la meta? (Pueden llegar juntos)
             </p>
             <h3>Solucion</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>Resultado: 13</p>
             <h3>Alternativa</h3>
             <div class="alternativa numero1">
                 <input id="atletas13" placeholder="Atletas" type="text">
                 <button id="operar13">Operar</button>
+                <p class="solucion result13"></p>
             </div>
         </div>
         <div class="ejercicio" id="ejer14">
@@ -272,14 +294,20 @@
                 <br>B. Las dos letras no pueden ser iguales.
             </p>
             <h3>Solucion A</h3>
-            <p>Tipo: Permutacion;  Resultado: 7980</p>
+            <p>esultado: 625000</p>
             <h3>Solucion B</h3>
-            <p>Tipo: Combinacion;  Resultado: 1330</p>
+            <p>Resultado: 600000</p>
             <h3>Alternativa</h3>
             <div class="alternativa numero1">
-                <input id="alumnos2" placeholder="Alumnos" type="text">
-                <input id="premios2" placeholder="Premios" type="text">
+                <input id="letras14" placeholder="Letras" type="text">]
+                <input id="simbol14" placeholder="Letras Del Simbolo" type="text">
+                <input id="digitos14" placeholder="Digitos" type="text">
+                <select id="opcion14">
+                    <option>Restricciones</option>
+                    <option>Letras Diferentes</option>
+                </select>
                 <button id="operar14">Operar</button>
+                <p class="solucion result14"></p>
             </div>
         </div>
     </div>

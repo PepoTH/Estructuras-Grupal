@@ -72,6 +72,8 @@ function permutacion(n,k){
 }
 
 
+
+
 //Ejercicio 1
 document.getElementById('operar1').addEventListener('click',()=>{
     let n = parseInt(document.getElementById('personas1').value)
@@ -221,3 +223,146 @@ document.getElementById('operar8').addEventListener('click',()=>{
 })
 
 //Ejercicio 9
+document.getElementById('operar9').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('mate9').value)
+    let k = parseInt(document.getElementById('control9').value)
+    let l = parseInt(document.getElementById('interfaz9').value)
+    let opcion = document.getElementById('opcion9').value
+    let res = document.getElementsByClassName('result9')[0]
+    if(isNaN(n) || isNaN(k) || isNaN(l)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1 || l < 1){
+        alert('El numero de personas no puede ser menor a 1')
+    }
+    else{
+        if(opcion == 'Todos'){
+            res.innerHTML = 'Solucion: '+ factorial(n) * factorial(k) * factorial(l) * 6
+        }
+        else if(opcion == 'Matematicas'){
+            res.innerHTML = 'Solucion: '+ factorial(1 + k + l) * factorial(n)
+        }
+        else if(opcion == 'Control'){
+            res.innerHTML = 'Solucion: '+ factorial(n + 1 + l) * factorial(k)
+        }
+        else{
+            res.innerHTML = 'Solucion: '+ factorial(n + k + 1) * factorial(l)
+        }
+        
+    }
+})
+
+//Ejercicio 10
+//Verificar Esta
+document.getElementById('operar10').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('mate10').value)
+    let m = parseInt(document.getElementById('fisic10').value)
+    let k = parseInt(document.getElementById('quimic10').value)
+    let opcion = document.getElementById('quimic10').value
+    let res = document.getElementsByClassName('result10')[0]
+    if(isNaN(n) || isNaN(m) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || m < 1 || k < 1){
+        alert('El numero de caminos no puede ser menor a 1')
+    }
+    else{
+        if(opcion == 'Matematicas'){
+            res.innerHTML = 'Solucion: '+ factorial(1 + m + k)/(factorial(1) * factorial(m) * factorial(k))
+        }
+        else if(opcion == 'Fisica'){
+            res.innerHTML = 'Solucion: '+ factorial(n + 1 + k)/(factorial(n) * factorial(1) * factorial(k))
+        }
+        else{
+            res.innerHTML = 'Solucion: '+ factorial(n + m + 1)/(factorial(n) * factorial(m) * factorial(1))
+        }
+    }
+})
+
+//Ejercicio 11
+document.getElementById('operar11').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('elegir11').value)
+    let k = parseInt(document.getElementById('totales11').value)
+    let opcion = document.getElementById('opcion11').value
+    let res = document.getElementsByClassName('result11')[0]
+    if(isNaN(n) || isNaN(k)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1){
+        alert('El numero no puede ser menor a 1')
+    }
+    else{
+        if(opcion == 'Obligatorias'){
+            res.innerHTML = 'Solucion: '+ combinacion(k - 4,n-4)
+        }
+        else {
+            res.innerHTML = 'Solucion: '+ combinacion(k,n)
+        }
+    }
+})
+
+//Ejercicio 12
+document.getElementById('operar12').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('billetes12').value)
+    let res = document.getElementsByClassName('result12')[0]
+    if(isNaN(n)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1){
+        alert('El numero no puede ser menor a 1')
+    }
+    else{
+        res.innerHTML = 'Solucion: '+ permutacion(n,2)
+    }
+})
+
+//Ejercicio 13
+document.getElementById('operar13').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('atletas13').value)
+    let res = document.getElementsByClassName('result13')[0]
+    if(isNaN(n)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1){
+        alert('El numero no puede ser menor a 1')
+    }
+    else{
+        //Buscar Formula
+        //Una Posibilidad que lleguen todos juntos
+        //Posibilidad que lleguen 2 juntos
+
+        let total = 1
+
+        for(let i = 2; i <= n; i++){
+            total += combinacion(n,i) * factorial(i)
+        }
+
+        res.innerHTML = 'Solucion: '+ total
+    }
+})
+
+//Ejercicio 14
+document.getElementById('operar14').addEventListener('click',()=>{
+    let n = parseInt(document.getElementById('letras14').value)
+    let k = parseInt(document.getElementById('simbol14').value)
+    let m = parseInt(document.getElementById('digitos14').value)
+    let opcion = document.getElementById('opcion14').value
+    let res = document.getElementsByClassName('result14')[0]
+    if(isNaN(n) || isNaN(k) || isNaN(m)){
+        alert('Por favor, introduce números válidos')
+    }
+    else if(n < 1 || k < 1 || m < 1){
+        alert('El numero no puede ser menor a 1')
+    }
+    else if(n < k + m){
+        alert('El numero de letras no puede ser menor a la suma de simbolos y digitos')
+    }
+    else{
+        if(opcion == 'Restricciones'){
+            res.innerHTML = 'Solucion: '+ n ** k * 10 ** m
+        }
+        else{
+            res.innerHTML = 'Solucion: '+ permutacion(n,k) * 10 ** m
+        }
+    }
+})
