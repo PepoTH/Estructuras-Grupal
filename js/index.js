@@ -1,3 +1,9 @@
+//Programa realizado por:
+//Cesar Dominguez
+//Alejandro Chavez
+//Jose Santana
+
+
 var nav_before = document.getElementsByClassName('nav-before')[0]
 var nav = document.getElementsByClassName('navbar')[0]
 var box = document.getElementsByClassName('main-index')[0]
@@ -139,7 +145,9 @@ document.getElementById('operar4').addEventListener('click',()=>{
         alert('El numero de hombres y mujeres no puede ser menor a 1')
     }
     else{
-        res.innerHTML = 'Solucion: '+ combinacion(n+k,k) * factorial(n)
+        mitad = Math.trunc((n+k)/2)
+        console.log(mitad)
+        res.innerHTML = 'Solucion: '+ factorial(mitad) * factorial(n + k - mitad)
     }
 })
 
@@ -253,7 +261,6 @@ document.getElementById('operar9').addEventListener('click',()=>{
 })
 
 //Ejercicio 10
-//Verificar Esta
 document.getElementById('operar10').addEventListener('click',()=>{
     let n = parseInt(document.getElementById('mate10').value)
     let m = parseInt(document.getElementById('fisic10').value)
